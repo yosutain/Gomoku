@@ -1,0 +1,75 @@
+<head>
+	<title>Gomoku</title>
+	<link rel="icon" href="https://dl.dropbox.com/s/7sosry4qeps9fvl/favicon.png">
+</head>
+
+<body>
+	<h1>五目</h1>
+	<p>
+		"The winner is the first player to get an unbroken row of five stones horizontally, vertically, or diagonally."
+	</p>
+	{{> board}}
+</body>
+
+<template name="board">
+	<div id="myBoard">
+		{{> row}}
+		{{> row}}
+		{{> row}}
+		{{> row}}
+		{{> row}}
+
+		{{> row}}
+		{{> row}}
+		{{> row}}
+		{{> row}}
+		{{> row}}
+
+		{{> row}}
+		{{> row}}
+		{{> row}}
+		{{> row}}
+		{{> row}}
+	</div>
+
+	<p>
+		Next piece will be {{color}}
+	</p>
+
+	<div id="resetPieces" class="resetButton">
+		Reset
+	</div>
+
+	<div id="winnerScreen">
+		<p id="winnerMessage">
+		</p>
+
+		<div id="hideMe">
+			Reset Board
+		</div>
+	</div>
+</template>
+
+<template name="row">
+	<ul class="myRow">
+	<!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+	--><button> - </button><!--
+	-->
+	</ul>
+</template>
